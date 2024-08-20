@@ -2,23 +2,26 @@
 #include <stdio.h>
 
 int main() {
-   int  num =19;
+   int  num;
+    printf("input (1-20) : ");
+    scanf("%d",&num);
+    printf("\n");
    int count = 0;
    int end = 0;
    int val = 9;
-for(int i = 0 ; i <= num ; i++){
+for(int i = 1 ; i <= num ; i++){
     for(int j = num ; j > 0 ; j--){
+            if(count == num){
+            count = 0;
+            printf("\n");
+        }
         printf(" %d ",val);
         val--;
         count++;
-        if(val < 1){
+        if(val <= 0){
             val = 9;
         }
-        if(count == num){
-            count = 0;
-            printf("\n");
 
-        }
         }
 }
     return 0;
